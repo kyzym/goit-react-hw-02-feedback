@@ -42,7 +42,7 @@ export class App extends Component {
     const { good, neutral, bad } = state;
 
     return (
-      <Box textAlign="center" mt={20}>
+      <Box display="flex" flexDirection="column" alignItems="center" mt={10}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(state)}
