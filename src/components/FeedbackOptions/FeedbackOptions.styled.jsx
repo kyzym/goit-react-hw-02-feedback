@@ -12,5 +12,15 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+
+  &:hover,
+  focus {
+    outline: 1.5px solid black;
+  }
+  &:active {
+    background-color: #cdcdcd;
+  }
 `;

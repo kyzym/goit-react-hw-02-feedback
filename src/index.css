@@ -16,7 +16,9 @@ code {
 }
 
 ul,
-li {
+li,
+h2,
+p {
   list-style: none;
   padding: 0;
   margin: 0;

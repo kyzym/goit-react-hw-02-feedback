@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { List, StatListItem } from './Statistics.styled';
+import { BsEmojiSmile, BsEmojiNeutral, BsEmojiFrown } from 'react-icons/bs';
 
 export const Statistics = ({
   good,
@@ -23,7 +24,22 @@ export const Statistics = ({
       <p>Total: {total}</p>
     </StatListItem>
     <StatListItem>
-      <p>Positive feedback: {positivePercentage}%</p>
+      <p>
+        Positive feedback:
+        {positivePercentage > 70 ? (
+          <>
+            {positivePercentage} % <BsEmojiSmile />{' '}
+          </>
+        ) : positivePercentage > 40 ? (
+          <>
+            {positivePercentage} % <BsEmojiNeutral />{' '}
+          </>
+        ) : (
+          <>
+            {positivePercentage} % <BsEmojiFrown />{' '}
+          </>
+        )}
+      </p>
     </StatListItem>
   </List>
 );
