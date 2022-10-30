@@ -49,20 +49,20 @@ export class App extends Component {
             onLeaveFeedback={onFeedbackIncrement}
           />
         </Section>
-        <Section title="Statistics"></Section>
 
-        {countTotalFeedback() ? (
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={countTotalFeedback()}
-            positivePercentage={countPositiveFeedbackPercentage()}
-          />
-        ) : (
-          <Notification message={`There is no feedback`}></Notification>
-        )}
-        <Section />
+        <Section title="Statistics">
+          {countTotalFeedback() ? (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={countTotalFeedback()}
+              positivePercentage={countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message={`There is no feedback`}></Notification>
+          )}
+        </Section>
       </Box>
     );
   }
